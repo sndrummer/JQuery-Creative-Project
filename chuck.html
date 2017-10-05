@@ -2,28 +2,16 @@
     <head>
         <title>Chuck Vibes</title>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-            
-            $.ajax({
-                   url: "http://api.icndb.com/jokes/random?firstName=Chuck&amp;exclude=[explicit]",
-                   dataType: "json",
-                   jsonpCallback: "cnj",
-                   success: function(data) {
-                   $("#Jokebox").append(
-                                        $("<p/>").text(data.value.joke),
-                                        );
-                   }
-                   });
-                   
-        </script>
+        <script type="text/javascript" src="ajax.js"></script>
     </head>
     <link rel="stylesheet" type="text/css" href="main.css">
     <body>
         <h1 id="Title"> He's Right Behind You </h1>
         
         <div id="Joke">
+            <button id= "JokeButton" onclick="getJoke()">Get a Joke</button>
         <h3 id="About">Chuck Norris Jokes for Days </h3>
-        <p> Warning! Some jokes contain content that could be offensive/innappropriate </p>
+        <p><strong> Warning! Some jokes contain content that could be offensive/innappropriate</strong> </p>
             <div id="Jokebox"> </div>
         </div>
             

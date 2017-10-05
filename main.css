@@ -52,6 +52,7 @@ footer {
     position: relative;
     overflow-y: auto;
     border-radius: 10px;
+    text-align:center;
 }
 
 #Gif {
@@ -72,3 +73,16 @@ footer {
     border-radius: 10px;
     border-radius: 10px;
 }
+
+#JokeButton{
+    margin: 0 auto;
+    color: green;
+    width: 90px;
+    height: 40px;
+
+}
+
+#JokeBox{
+    text-align: left;
+}
+
