@@ -17,7 +17,7 @@ function getJoke()
         myJoke = joke;
         getGif();
         console.log("Here is my Joke " + myJoke);
-        $("#Jokebox").append(
+        $("#Jokebox").append( 
             $("<p/>").text(joke),
                              );
         }
