@@ -10,12 +10,10 @@ function getJoke()
         jsonpCallback: "cnj",
         success: function(data) {
         var joke = data.value.joke.replace(/&quot;/g,'"');
-        if (joke.includes("sex"||"gay")) {
+        if (joke.includes("sex"||"gay"||"porn"||"shit")) {
             getJoke();
             return;
-        } else {    
-            
-        }
+        } 
         myJoke = joke;
         getGif();
         console.log("Here is my Joke " + myJoke);
