@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Chuck Vibes</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            
+            $.ajax({
+                   url: "http://api.icndb.com/jokes/random?firstName=Chuck&amp;exclude=[explicit]",
+                   dataType: "json",
+                   jsonpCallback: "cnj",
+                   success: function(data) {
+                   $("#Jokebox").append(
+                                        $("<p/>").text(data.value.joke),
+                                        );
+                   }
+                   });
+                   
+        </script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <body>
+        <h1 id="Title"> He's Right Behind You </h1>
+        
+        <div id="Joke">
+        <h3 id="About">Chuck Norris Jokes for Days </h3>
+        <p> Warning! Some jokes contain content that could be offensive/innappropriate </p>
+            <div id="Jokebox"> </div>
+        </div>
+            
+        <div id="Gif">
+            <h3 id="About">Nothing about Chuck Norris is a Joke </h3>
+            
+        </div>
+        <footer>
+        <div id="footer">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/officialchucknorrispage">
+                        <figure class="fblink"> <img src="facebook.png" alt="Facebook"> </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/chucknorris/?hl=en">
+                        <figure class="instalink"> <img src="instagram.png" alt="Facebook"> </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/chucknorris">
+                        <figure class="twitlink"> <img src="twitter.png" alt="Facebook"> </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </footer>
+</html>
+
